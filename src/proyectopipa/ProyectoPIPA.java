@@ -25,11 +25,14 @@ public class ProyectoPIPA {
         List<PuntoDibujo> puntos = new ArrayList<PuntoDibujo>();
         read.read("C:/Users/Benja/Desktop/nodes.xml", puntos);
         for (PuntoDibujo p : puntos) {
+            System.out.println("id:"+p.id_osmid);
             System.out.println("Punto (X, Y): " + p.posX + "," + p.posY);
         }
-        //Reader read2 = new Reader();
-       // read.read2("C:/Users/Benja/Desktop/edges.xml");
-        // TODO code application logic here
+        
+        Reader read2 = new Reader();
+        List<Edges> pEdges = new ArrayList<Edges>();
+        read.read2("C:/Users/Benja/Desktop/edges.xml",pEdges,puntos);
+        
         
         SwingUtilities.invokeLater(() -> {
             

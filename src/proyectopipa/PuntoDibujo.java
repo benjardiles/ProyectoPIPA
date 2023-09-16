@@ -9,11 +9,15 @@ package proyectopipa;
  * @author Benja
  */
 public class PuntoDibujo {
-    float posY;
-    float posX;
-    public PuntoDibujo (float posX, float posY) {
-        this.posX = posX;
+    double posY;
+    double posX;
+    String id_osmid;
+
+    public PuntoDibujo(double posY, double posX, String id_osmid) {
         this.posY = posY;
+        this.posX = posX;
+        this.id_osmid = id_osmid;
     }
+
    
 }
